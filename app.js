@@ -9,7 +9,7 @@ const dataStore = require('nedb');
 const database = new dataStore('database.db');
 database.loadDatabase();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Escuchando en puerto ${PORT}...`)
 });
