@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <style>
+        .pressed_button{
+            background-color:rgb(8, 80, 175);
+            color:white;
+        }
+        .title{
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>El Clima :)</h1>
+    <a href="logs/yep.html">Ver registros</a>
+    <h1 class="title" id="country"></h1>
+    <p style="color:grey;">Coordenadas: <small  id="coords"></small></p>
+    <h1 class="title" id="temp"></h1>
+    <button id="temp_c" value="0">Celsius</button>
+    <button id="temp_f" value="0">Fahrenheit</button>
+    <br><br>
+    <button id="enviar">Registrar
+    </button>
+    <br>
+    <script src="script.js"></script>
+</body>
+
+</html>
