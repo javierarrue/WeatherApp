@@ -50,7 +50,7 @@ app.get('/weather/:latlong',async (req,res) =>{
     console.log(coords);
     const lat = coords[0];
     const long = coords[1];
-    const weather_api = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}=${lat},${long}`;
+    const weather_api = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${lat},${long}`;
     const response = await fetch(weather_api);
     const weather = await response.json();
     res.json(weather);

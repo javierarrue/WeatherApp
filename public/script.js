@@ -2,7 +2,9 @@ let lan,
     lon,
     country,
     temp_c,
-    temp_f;
+    temp_f,
+    condition,
+    icon;
 
     document.getElementById('temp_c').className = 'pressed_button';
 
@@ -21,8 +23,12 @@ let lan,
             country = weather.location.country;
             temp_c = weather.current.temp_c;
             temp_f = weather.current.temp_f;
+            condition = weather.current.condition.text;
+            icon = weather.current.condition.icon;
             console.log(weather);
 
+            document.getElementById('condition').innerText = condition;
+            document.getElementById('icon').src = icon;
             document.getElementById('coords').innerText = lat + ', ' +long;
             document.getElementById('country').innerText = country;
             document.getElementById('temp').innerText = temp_c +  "°";
